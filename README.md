@@ -142,3 +142,23 @@ A single HTTP request may contains several payloads.
 - Session data
 - Cookies
 - Headers
+
+In modern backend development practices, it is now possible to fetch and reuse the type information from DTO schemas:
+```ts
+const signup = {
+	body : joi.object({
+		userType  : joi.string().required().valid(userTypeList),
+		password  : joi.string().password.required(),
+		mobile    : joi.string().optional(),
+		firstName : joi.string().required(),
+		email     : joi.string().email().required(),
+	}).required(),
+}
+
+function signupController (req, res) {
+	const data = fetchSchema(signup, 'body')
+	data.email = 123 // static type check error, as `email` is `string`
+}
+```
+
+
