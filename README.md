@@ -118,3 +118,27 @@ Error messages should help users understand & resolve API errors easily.
 	- 429 RESOURCE_EXHAUSTED, too many requests; rate-limit exceeded
 	- 400 FAILED_PRECONDITION, the operation was rejected; business logic unmet
 	- 400 UNAVAILABLE, the operation was rejected; user should retry
+
+### Others
+#### GraphQL
+#### gRPC
+
+### Request Data Transfer
+A single HTTP request may contains several payloads.
+- Request body
+	- To send data in POST and PUT
+	- To create a new resource.
+	- To update an existing resource.
+	- Such as `{"name": "muhammad", "language": "golang"}`
+- Query string
+	- To control what data is returned in endpoint responses.
+	- To sort.
+	- To filter.
+	- To add search condition.
+	- Such as `/users?region=Malaysia&sort=createdAt`.
+- Path variables in URI
+	- Path variables are used to get a singleton from a collection resource.
+	- Such as `GET /users/{userId}/orders`, `GET /shops/{id}/orders`
+- Session data
+- Cookies
+- Headers
