@@ -162,3 +162,24 @@ function signupController (req, res) {
 ```
 
 
+## Backend Architecture
+Domain-driven design.
+
+## Database
+
+### Data Access Objects
+
+### Scalability
+
+### Security
+
+### Migrations
+
+## Authentication and Authorization
+
+## Scaling
+
+## Security?
+
+## Deployments
+Kubernetes, Docker, Terraform, Google Cloud, AWS, Azure, Alibaba, and all those.
