@@ -103,3 +103,18 @@ Error messages should help users understand & resolve API errors easily.
 - Do not assume user knows anything about service implementation.
 - Should be constructed such that technical users can respond, and correct it.
 - Keep the message brief. If needed, provide a link to more info, questions, feedback. Otherwise, use "details" field.
+
+#### Status Codes
+- Individual APIs must avoid defining additional error codes.
+- Developers must use canonical error codes.
+- Standard error codes for Google APIs are as follows.
+	- 200 OK, not an error; returned on success.
+	- 500 UNKNOWN, internal server error; unexpected and insufficient info
+	- 400 INVALID_ARGUMENT, invalid/problematic user data
+	- 404 NOT_FOUND, something doesn't exist globally, for everyone
+	- 409 ALREADY_EXISTS, something already exists
+	- 403 PERMISSION_DENIED, access denied for a user; relevant people have access
+	- 401 UNAUTHENTICATED, no bearer token; no valid auth creds
+	- 429 RESOURCE_EXHAUSTED, too many requests; rate-limit exceeded
+	- 400 FAILED_PRECONDITION, the operation was rejected; business logic unmet
+	- 400 UNAVAILABLE, the operation was rejected; user should retry
