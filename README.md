@@ -24,3 +24,7 @@ Other protocols exist to address specific needs, but are never seen between a fr
 - FTP or File Transfer Protocol to transfer files between servers and clients.
 - WebDAV or Web Distributed Authoring and Versioning, an extension of HTTP, to collaboratively edit and manage files.
 - WebSocket, an extension of HTTP, to enable full-duplex communication between a server and a client.
+
+On the other hand, projects such as WebRTC are not a standalone protocol, rather a set of technologies and standards to enable real-time communication (usually voice and video) between clients.
+
+Various architectural styles are maintained to communicate in a structured approach such as REST, SOAP, gRPC, and GraphQL.
