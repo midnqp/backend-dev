@@ -52,3 +52,28 @@ REST APIs are modeled as a resource hierarchy. The primary data representation i
 - **Sub-collection resources** are nested. 
 	- For example, in `/users/:userId/projects`, "projects" is a sub-collection resource
 	- Similarly, a singleton in that sub-collection will be `/users/:userId/projects/:projectId`
+
+
+#### Design
+Constraints in REST API naming ensures a design of scalable API endpoints:
+
+- Use plural nouns, such as `users`, `orders`, `categories`.
+- Use hyphen, not underscores. Use lowercase, never camel-case. Correct one is `GET /food-categories`, not `GET /foodCategories`.
+- Never use CRUD function names, such as `GET /users/list` or `POST /users/create`.
+
+Examples of commonly used APIs:
+- `GET /users` to get a list of users.
+- `GET /users/:id` to get a single user.
+- `POST /users/:id` to create a single user.
+- `PUT /users/:id` to update a single user.
+- `DELETE /users/:id` to delete a single user.
+
+For sub-resources:
+- `GET /users/:id/projects` to get projects of given user
+- `DELETE /users/:id/projects/:id` to remove a project of given user
+
+Adding some features:
+- `GET /users` `?country=arabia` `&status=verified` to search users by country and status
+- `GET /users` `?_fields=name,country` to list users, but return only 2 data attributes: name and country
+- `GET /users` `?_sort=name` `&_order=asc` to list users and sort by name in ascending order
+- `GET /users` `?_page=1` `&_limit=10` to list users and paginate
