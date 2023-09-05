@@ -77,3 +77,19 @@ Adding some features:
 - `GET /users` `?_fields=name,country` to list users, but return only 2 data attributes: name and country
 - `GET /users` `?_sort=name` `&_order=asc` to list users and sort by name in ascending order
 - `GET /users` `?_page=1` `&_limit=10` to list users and paginate
+
+#### Error
+Most Google APIs use resource-oriented API design. Instead of defining different `NOT_FOUND` errors, the server uses one standard `NOT_FOUND` status code, and tells the client which specific resource was not found. This is interesting!
+
+The smaller error space has advantages:
+- reduces the complexity of documentation
+- better mapping
+- reduces client logic complexity
+
+```ts
+type Error = {
+  code: number
+  message: string
+  details: any[]
+}
+```
