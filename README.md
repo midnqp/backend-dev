@@ -93,3 +93,13 @@ type Error = {
   details: any[]
 }
 ```
+
+- Error code: simple code, easily handled by client
+- Error message: developer-facing human-readable error
+- Error details: additional error information for client, such as retry info, help link, etc.
+
+Error messages should help users understand & resolve API errors easily.
+- Do not assume the user to an expert user of the API.
+- Do not assume user knows anything about service implementation.
+- Should be constructed such that technical users can respond, and correct it.
+- Keep the message brief. If needed, provide a link to more info, questions, feedback. Otherwise, use "details" field.
