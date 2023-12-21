@@ -11,3 +11,8 @@ With these two as foundation, a plethora of backend-specific concepts emerge.
 - Scalability and high availability
 - Database concepts e.g. storage, design, migration, performance, security
 - Backend architecture and frameworks
+
+## API
+An application programming interface or API is a way for two programs (in this case, frontend and backend) to communicate with each other.
+
+APIs communicate across the web through protocols. 
