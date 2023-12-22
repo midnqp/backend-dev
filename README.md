@@ -16,3 +16,11 @@ With these two as foundation, a plethora of backend-specific concepts emerge.
 An application programming interface or API is a way for two programs (in this case, frontend and backend) to communicate with each other.
 
 APIs communicate across the web through protocols. 
+
+### HTTP
+Hypertext Transfer Protocol or HTTP is the de facto standard to communication over the web, especially between a frontend and backend. 
+
+Other protocols exist to address specific needs, but are never seen between a frontend and backend. Such as:
+- FTP or File Transfer Protocol to transfer files between servers and clients.
+- WebDAV or Web Distributed Authoring and Versioning, an extension of HTTP, to collaboratively edit and manage files.
+- WebSocket, an extension of HTTP, to enable full-duplex communication between a server and a client.
