@@ -1,2 +1,1 @@
-# backend-dev
-Notes on software backend development
+Notes on Backend by *Muhammad Bin Zafar*
